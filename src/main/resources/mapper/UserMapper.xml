@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mz.todolist.mapper.UserMapper">
+    <resultMap id="selectAll" type="com.mz.todolist.entity.User">
+        <id column="id" property="id"></id>
+        <id column="username" property="userName"></id>
+        <id column="password" property="passWord"></id>
+        <id column="address" property="address"></id>
+        <id column="sex" property="sex"></id>
+        <id column="birthday" property="brithDay"></id>
+    </resultMap>
+    
+    <select id="selectAll" resultMap="selectAll">
+        select * from user
+    </select>
+</mapper>

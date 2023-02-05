@@ -1,5 +1,6 @@
 package com.mz.todolist.controller;
 
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.mz.todolist.entity.TodoListEntity;
 import com.mz.todolist.service.TodoListService;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,5 +22,11 @@ public class TodoListController {
     public List<TodoListEntity> selectAllTodoList() {
         /*不应该让用户进行传递，直接根据当前登录用户进行查询*/
         return service.findAllTodoListByUserId();
+    }
+
+
+    @GetMapping(value = "page")
+    public Page<TodoListEntity> page(int userId, int page, int pageSize) {
+        return service.page(userId, page, pageSize);
     }
 }

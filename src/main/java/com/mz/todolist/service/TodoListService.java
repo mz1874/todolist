@@ -1,5 +1,6 @@
 package com.mz.todolist.service;
 
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.mz.todolist.entity.TodoListEntity;
 
 import java.util.List;
@@ -13,4 +14,6 @@ public interface TodoListService {
      * @return
      */
     List<TodoListEntity> findAllTodoListByUserId();
+
+    Page<TodoListEntity> page(int userId, int page, int pageSize);
 }

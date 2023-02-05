@@ -27,5 +27,4 @@ public class Item extends BaseEntity{
     private int todoListId;
 
 
-
 }

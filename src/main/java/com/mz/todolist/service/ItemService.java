@@ -8,5 +8,5 @@ import java.util.List;
 
 public interface ItemService {
 
-    Page<Item> findAllItemsByUserIdAndTodoListId(int userId, int todoListId, int page);
+    Page<Item> findAllItemsByUserIdAndTodoListId(int userId, int todoListId, int page, int pageSize);
 }

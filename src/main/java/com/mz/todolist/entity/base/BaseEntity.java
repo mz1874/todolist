@@ -8,11 +8,11 @@ import java.util.Date;
 public class BaseEntity {
 
     @TableId(value = "id")
-    private int id ;
+    public int id ;
 
     @TableField("create_time")
-    private Date createTime;
+    public Date createTime;
 
     @TableField("create_id")
-    private int createId;
+    public int createId;
 }

@@ -15,7 +15,7 @@
     <description>基于JAVA8 的 TodoList Website</description>
     <properties>
         <!--注意 对springboot  3.0.2 jdk需要使用 高于 17-->
-        <java.version>19</java.version>
+        <java.version>8</java.version>
     </properties>
     <dependencies>
         <dependency>

@@ -16,10 +16,10 @@ public class ItemServiceImpl implements ItemService {
     private ItemMapper mapper;
 
     @Override
-    public Page<Item> findAllItemsByUserIdAndTodoListId(int userId, int todoListId, int number) {
+    public Page<Item> findAllItemsByUserIdAndTodoListId(int userId, int todoListId, int number, int pageSize) {
         QueryWrapper<Item> queryWrapper = new QueryWrapper();
         queryWrapper.eq("create_id", userId).eq("todolist_id", todoListId).orderByDesc("create_time");
-        Page<Item> page = new Page<>(number, 20);
+        Page<Item> page = new Page<>(number, pageSize);
         Page<Item> result = mapper.selectPage(page, queryWrapper);
         return  result;
     }

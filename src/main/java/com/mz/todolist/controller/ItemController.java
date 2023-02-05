@@ -25,7 +25,7 @@ public class ItemController {
      * @return
      */
     @GetMapping(value = "findItemByUserIdAndTodolistId")
-    public Page<Item> findItemByUserIdAndTodolistId(int userId, int todoListId, int page) {
-        return service.findAllItemsByUserIdAndTodoListId(userId, todoListId, page);
+    public Page<Item> findItemByUserIdAndTodolistId(int userId, int todoListId, int page, int pageSize) {
+        return service.findAllItemsByUserIdAndTodoListId(userId, todoListId, page, pageSize );
     }
 }

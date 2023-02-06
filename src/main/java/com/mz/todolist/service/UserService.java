@@ -1,16 +1,17 @@
 package com.mz.todolist.service;
 
-import com.mz.todolist.entity.User;
-import org.springframework.stereotype.Service;
+import com.mz.todolist.entity.UserEntity;
 
 import java.util.List;
 
 public interface UserService {
 
-    List<User> selectAllByPlus();
+    List<UserEntity> selectAllByPlus();
 
-    User findUserById(int id);
+    UserEntity findUserById(int id) throws Exception;
 
-    int updateUserDetails(User user);
+    int updateUserDetails(UserEntity userEntity);
+
+    UserEntity findUserByUserName(String userName);
 
 }

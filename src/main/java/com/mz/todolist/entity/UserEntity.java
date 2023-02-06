@@ -9,7 +9,7 @@ import java.util.Date;
 
 @TableName(value = "user")
 @Data
-public class User extends BaseEntity {
+public class UserEntity extends BaseEntity {
 
     @TableField("username")
     private String userName;
